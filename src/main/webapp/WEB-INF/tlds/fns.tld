@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+        version="2.0">
+
+    <description>JSTL 1.1 functions library</description>
+    <display-name>JSTL functions sys</display-name>
+    <tlib-version>1.1</tlib-version>
+    <short-name>fns</short-name>
+    <uri>http://java.sun.com/jsp/jstl/functionss</uri>
+
+    <!-- DictUtils -->
+    <function>
+        <description>根据ID查询指点表的指定字段</description>
+        <name>getTableDataByPk</name>
+        <function-class>com.so.commons.utils.FnsUtils</function-class>
+        <function-signature>java.lang.String getTableDataByPk(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+        </function-signature>
+        <example>${fns:getTableDataByPk(tableName, pkField, pkValue, showField)}</example>
+    </function>
+
+    <function>
+        <description>根据ID查询指点表的指定字段</description>
+        <name>getTableData</name>
+        <function-class>com.so.commons.utils.FnsUtils</function-class>
+        <function-signature>java.util.List getTableData(java.lang.String,java.lang.String,java.lang.String)</function-signature>
+        <example>${fns:getTableData(tableName, pkField, showField)}</example>
+    </function>
+
+    <function>
+        <description>根据字典名称获取字典列表</description>
+        <name>dictList</name>
+        <function-class>com.so.commons.utils.FnsUtils</function-class>
+        <function-signature>java.util.List dictList(java.lang.String)</function-signature>
+        <example>${fns:dictList(dictName)}</example>
+    </function>
+
+    <function>
+        <description>根据字典名称获取字典列表</description>
+        <name>dictLable</name>
+        <function-class>com.so.commons.utils.FnsUtils</function-class>
+        <function-signature>java.lang.String dictLabel(java.lang.String,java.lang.String)</function-signature>
+        <example>${fns:dictLabel(dictName, dictValue)}</example>
+    </function>
+
+    <function>
+        <description>获取系统所有的角色</description>
+        <name>roles</name>
+        <function-class>com.so.commons.utils.FnsUtils</function-class>
+        <function-signature>java.util.List roles()</function-signature>
+        <example>${fns:roles()}</example>
+    </function>
+
+    <function>
+        <description>根据角色ID获取对应的角色</description>
+        <name>roleName</name>
+        <function-class>com.so.commons.utils.FnsUtils</function-class>
+        <function-signature>java.lang.String roleName(java.lang.String)</function-signature>
+        <example>${fns:roleName(roleId)}</example>
+    </function>
+
+</taglib>
